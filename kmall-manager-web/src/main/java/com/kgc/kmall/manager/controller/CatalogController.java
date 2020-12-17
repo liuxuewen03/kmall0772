@@ -1,5 +1,6 @@
 package com.kgc.kmall.manager.controller;
 
+
 import com.kgc.kmall.bean.PmsBaseCatalog1;
 import com.kgc.kmall.bean.PmsBaseCatalog2;
 import com.kgc.kmall.bean.PmsBaseCatalog3;
@@ -13,28 +14,30 @@ import java.util.List;
 
 /**
  * @author shkstart
- * @create 2020-12-16 18:45
+ * @create 2020-12-16 15:30
  */
 @CrossOrigin
 @RestController
 public class CatalogController {
+
+
     @Reference
     CatalogService catalogService;
 
     @RequestMapping("/getCatalog1")
-    public List<PmsBaseCatalog1> getCatalog1() {
-        return catalogService.getCatalog1();
+    public List<PmsBaseCatalog1> getCatalog1(){
+        return catalogService.getPmsBaseCataLog1();
 
     }
 
     @RequestMapping("/getCatalog2")
-    public List<PmsBaseCatalog2> getCatalog2(Integer catalog1Id) {
-        return catalogService.getCatalog2(catalog1Id);
+    public List<PmsBaseCatalog2> getCatalog2(Integer catalog1Id){
+        return catalogService.getPmsBaseCatalog2(catalog1Id);
     }
 
     @RequestMapping("/getCatalog3")
-    public List<PmsBaseCatalog3> getCatalog3(Integer catalog2Id) {
-        return catalogService.getCatalog3(catalog2Id);
+    public List<PmsBaseCatalog3> getCatalog3(Integer catalog2Id){
+        return catalogService.getPmsBaseCatalog3(catalog2Id);
     }
 
 }

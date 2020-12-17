@@ -6,9 +6,8 @@ import java.util.List;
 
 /**
  * @author shkstart
- * @create 2020-12-15 18:41
+ * @create 2020-12-15 16:09
  */
 public interface MemberService {
-
     List<Member> selectAllMember();
 }
